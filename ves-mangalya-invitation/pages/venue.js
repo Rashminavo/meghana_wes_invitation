@@ -2,8 +2,9 @@ import Layout from '../components/Layout';
 import Divider from '../components/Divider';
 
 // 👉 Replace with your actual venue address and Google Maps embed query.
-const VENUE_NAME = 'සිංහපුර ශ්‍රී විජයානන්ද විහාරය';
-const MAPS_QUERY = 'Singhapura Sri Vijayananda Viharaya, Sri Lanka';
+const VENUE_NAME = 'Sri Thilakarama Viharaya';
+const VENUE_ADDRESS = 'Madapatha Rd, Piliyandala';
+const MAPS_QUERY = `${VENUE_NAME}, ${VENUE_ADDRESS}`;
 
 export default function Venue() {
   return (
@@ -21,8 +22,7 @@ export default function Venue() {
         </div>
         <div className="addr-card">
           <h3>{VENUE_NAME}</h3>
-          <p>[ලිපිනය පේළිය 1]</p>
-          <p>[ලිපිනය පේළිය 2], [නගරය]</p>
+          <p>{VENUE_ADDRESS}</p>
           <span className="label">නවතන පහසුකම්</span>
           <p>[වාහන නැවැත්වීමේ පහසුකම් පිළිබඳ විස්තර]</p>
           <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 20 }}>

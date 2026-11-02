@@ -38,7 +38,6 @@ const PHOTOS = [
   '/gallery6.jpg',
   '/gallery7.jpg',
 ];
-const VENUE_NAME = 'බටුවන්දර ශ්‍රී තිලකාරාම පුරාණ විහාරය';
 const MAPS_QUERY = 'Sri Thilakarama Viharaya, Madapatha Rd, Piliyandala';
 const CONTACTS = [
   { name: '[චන්ද්‍රිකා ගුරුතුමිය]', role: 'නර්තන ගුරුවරයා', phone: '070 406 0715'},
@@ -171,7 +170,7 @@ function VenueSection() {
       <Divider />
       <div className="venue-grid">
         <div className="map-slot">
-          <iframe loading="lazy" src={`https://www.google.com/maps?q=6.7666219,79.9475731&output=embed`} />
+          <iframe loading="lazy" src={`https://www.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&output=embed`} />
         </div>
         
       </div>
