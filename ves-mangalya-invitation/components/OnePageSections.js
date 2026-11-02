@@ -39,6 +39,7 @@ const PHOTOS = [
   '/gallery7.jpg',
 ];
 const MAPS_QUERY = 'Sri Thilakarama Viharaya, Madapatha Rd, Piliyandala';
+const VENUE_NAME = MAPS_QUERY;
 const CONTACTS = [
   { name: '[චන්ද්‍රිකා ගුරුතුමිය]', role: 'නර්තන ගුරුවරයා', phone: '070 406 0715'},
   { name: '[චන්ද්‍රිකා ගුරුතුමිය]', role: 'නර්තන ගුරුවරයා', phone: '077 872 2044'},
