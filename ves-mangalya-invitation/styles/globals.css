@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&display=swap');
+
+:root {
+  --parchment: #F1E6CF;
+  --parchment-deep: #E6C787;
+  --maroon: #5A140C;
+  --maroon-dark: #330000;
+  --gold: #C9A159;
+  --gold-light: #E3C888;
+  --ink: #3B1A0E;
+  --ink-soft: #6b4b2e;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--parchment);
+  color: var(--ink);
+  font-family: 'Noto Sans Sinhala', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Serif Sinhala', serif;
+  color: var(--maroon);
+  margin: 0 0 8px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--maroon-dark);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  padding: 48px 0 80px;
+}
+
+.scroll-section {
+  scroll-margin-top: 86px;
+  padding: 42px 0 64px;
+  border-bottom: 1px solid rgba(201, 161, 89, 0.35);
+}
+
+.scroll-section:first-child {
+  padding-top: 0;
+}
+
+.scroll-section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  display: block;
+  text-align: center;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: #A4392C;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 36px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 auto 34px;
+  width: fit-content;
+}
+.divider svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--gold);
+}
+.divider .line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--maroon-dark);
+  border-bottom: 2px solid var(--gold);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.brand {
+  color: var(--gold-light);
+  font-family: 'Noto Serif Sinhala', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  display: block;
+  color: #EAD9A8;
+  font-size: 0.82rem;
+  padding: 8px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: var(--maroon-dark);
+  background: var(--gold);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--maroon-dark);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 34px 20px 26px;
+  font-size: 0.85rem;
+  border-top: 2px solid var(--gold);
+}
+.footer .bless {
+  font-family: 'Noto Serif Sinhala', serif;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.footer .meta {
+  opacity: 0.6;
+  margin-top: 14px;
+  font-size: 0.72rem;
+}
+
+/* ---------- Cards / shared blocks ---------- */
+.frame-photo {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 4px solid var(--gold);
+  box-shadow: 0 10px 30px -12px rgba(58, 10, 5, 0.5);
+}
+
+.placeholder-photo {
+  background:
+    repeating-linear-gradient(135deg, #e3d3a4 0 14px, #ddc891 14px 28px);
+  border: 3px solid var(--gold);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--maroon);
+  text-align: center;
+  min-height: 160px;
+  padding: 16px;
+}
+.placeholder-photo span {
+  font-size: 0.82rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--maroon);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn.solid {
+  background: var(--maroon);
+  color: var(--parchment);
+}
+.btn.solid:hover { background: var(--maroon-dark); }
+.btn.outline {
+  background: transparent;
+  color: var(--maroon);
+}
+.btn.outline:hover { background: var(--maroon); color: var(--parchment); }
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.cta-row.left {
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+/* ---------- Countdown ---------- */
+.cd-grid {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.cd-box {
+  background: var(--maroon);
+  color: var(--parchment);
+  width: 88px;
+  padding: 16px 0;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  text-align: center;
+}
+.cd-box .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+.cd-box .lbl {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* ---------- Students grid ---------- */
+.s-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 24px;
+}
+.s-card { text-align: center; }
+.s-card .photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
+.student-photo {
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  box-shadow: 0 8px 18px -12px rgba(58, 10, 5, 0.65);
+}
+.student-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.s-card h3 { font-size: 0.95rem; margin-bottom: 2px; }
+.s-card .batch { font-size: 0.76rem; color: #A4392C; }
+
+/* ---------- Timeline / agenda ---------- */
+.timeline {
+  max-width: 620px;
+  margin: 0 auto;
+  position: relative;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: repeating-linear-gradient(180deg, var(--gold) 0 6px, transparent 6px 12px);
+}
+.t-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.t-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid var(--gold);
+  z-index: 1;
+  color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+.t-body .time {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: #A4392C;
+  font-size: 1rem;
+}
+.t-body h3 { font-size: 1.02rem; margin: 2px 0 4px; }
+.t-body p { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+
+/* ---------- Gallery ---------- */
+.g-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .g-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.g-grid .placeholder-photo {
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+.gallery-tile {
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 3px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+}
+.gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+.gallery-tile:hover img {
+  transform: scale(1.04);
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 6, 7, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 30px;
+}
+.lightbox-photo {
+  width: min(90vw, 480px);
+  height: min(70vh, 480px);
+  padding: 0;
+  border: 3px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+}
+.lightbox-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- Venue ---------- */
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+@media (min-width: 720px) {
+  .venue-grid { grid-template-columns: 1fr 1fr; }
+}
+.map-slot {
+  aspect-ratio: 4 / 3;
+  border: 3px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.map-slot iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.addr-card .label {
+  color: #A4392C;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 16px;
+}
+.addr-card p { margin: 4px 0; }
+
+/* ---------- Contact ---------- */
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+.c-card {
+  text-align: center;
+  background: #fff8e8;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  padding: 24px 14px;
+}
+.c-card .avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background: var(--maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 1.2rem;
+}
+.c-card h3 { font-size: 0.98rem; margin-bottom: 2px; }
+.c-card .role { font-size: 0.76rem; color: #A4392C; margin-bottom: 10px; }
+.c-card a { font-size: 0.86rem; display: block; margin-bottom: 4px; }
+
+/* ---------- Hero (home) ---------- */
+.hero-photo-wrap {
+  max-width: 480px;
+  margin: 0 auto 30px;
+}
+.hero-caption {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.hero-caption h1 {
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+.hero-nekath {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  padding: 10px 22px;
+  margin-top: 14px;
+  font-size: 0.88rem;
+}
+.hero-nekath b {
+  display: block;
+  color: var(--maroon);
+  font-family: 'Noto Serif Sinhala', serif;
+  font-size: 0.98rem;
+}

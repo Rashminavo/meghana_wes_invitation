@@ -1,0 +1,13 @@
+{
+  "name": "wes-invitation-deploy",
+  "private": true,
+  "scripts": {
+    "build": "npm ci --prefix ves-mangalya-invitation && npm run build --prefix ves-mangalya-invitation",
+    "start": "npm run start --prefix ves-mangalya-invitation"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
