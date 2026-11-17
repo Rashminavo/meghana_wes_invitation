@@ -49,6 +49,7 @@ export default function Home() {
       <style jsx>{`
         .invitation-launcher {
           align-items: center;
+          box-sizing: border-box;
           background:
             radial-gradient(ellipse at 50% 48%, rgba(255, 251, 242, 0.82), rgba(250, 236, 215, 0.48) 100%),
             repeating-linear-gradient(115deg, rgba(160, 112, 55, 0.025) 0, rgba(160, 112, 55, 0.025) 1px, transparent 1px, transparent 5px),
@@ -65,6 +66,29 @@ export default function Home() {
           position: relative;
           transition: opacity 650ms ease, transform 650ms ease;
           width: 100%;
+        }
+
+        @media (max-width: 480px) {
+          .invitation-launcher {
+            inset: 0;
+            position: fixed;
+            height: 100%;
+            min-height: 100%;
+            width: 100vw;
+            display: grid;
+            place-items: center;
+          }
+
+          .open-invitation {
+            justify-self: center;
+            align-self: center;
+            margin: 0;
+            transform: none;
+          }
+
+          .open-invitation:hover {
+            transform: translateY(-2px);
+          }
         }
 
         .invitation-launcher.is-opening {
@@ -181,12 +205,6 @@ export default function Home() {
         }
 
         @media (max-width: 480px) {
-          .invitation-launcher {
-            min-height: 100svh;
-            height: 100svh;
-            padding: 0;
-          }
-
           .corner-ornament {
             height: 115px;
             width: 115px;
