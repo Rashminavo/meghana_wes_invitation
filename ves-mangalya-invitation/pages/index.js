@@ -56,9 +56,11 @@ export default function Home() {
             #fbf0de;
           color: #651c2a;
           display: flex;
+          box-sizing: border-box;
           height: 100vh;
           height: 100dvh;
           justify-content: center;
+          align-items: center;
           overflow: hidden;
           position: relative;
           transition: opacity 650ms ease, transform 650ms ease;
@@ -179,6 +181,12 @@ export default function Home() {
         }
 
         @media (max-width: 480px) {
+          .invitation-launcher {
+            min-height: 100svh;
+            height: 100svh;
+            padding: 0;
+          }
+
           .corner-ornament {
             height: 115px;
             width: 115px;
