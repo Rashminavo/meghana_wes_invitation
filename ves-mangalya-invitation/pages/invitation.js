@@ -9,7 +9,7 @@ export default function Home() {
     <Layout title="මුල් පිටුව">
       <section id="home" className="scroll-section hero-section">
         <span className="eyebrow">ආරාධනා පත්‍රය</span>
-        <h1 className="title hero-title">වෙස් තැබීමේ උත්සවය</h1>
+        <h1 className="title hero-title">හිසවෙස් හා පාහිම්පත් පැළදවීමේ මංගල්‍ය</h1>
 
         <div className="hero-photo-wrap frame-photo">
           <Image
@@ -24,12 +24,11 @@ export default function Home() {
 
         <div className="hero-caption">
           <p>
-            සහෝදර සහෝදරියන්ට ගෞරවයෙන් ආරාධනා කර සිටිමු,
-            වෙස් තැබීමේ ඓතිහාසික උත්සවයට සහභාගී වී ආශිර්වාද එක් කරන්න.
+            ඔබ සැමගේ ගෞරවනීය සහභාගීත්වය අපේක්ෂා කරමු.
           </p>
           <div className="hero-nekath">
             නැකත් වේලාව
-            <b>සවස 7.00</b>
+            <b>උදෑසන 7.00</b>
           </div>
         </div>
 

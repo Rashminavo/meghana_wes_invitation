@@ -14,7 +14,7 @@ const STUDENTS = [
   { name: 'දුලීෂී නිම්තරා',photo: '/student8.jpeg' }
 ];
 const AGENDA = [
-  { time: 'පෙ.ව.5.00', title: 'හිස වෙස් හා පාහිම්පත් පැළදවීම'},
+  { time: 'පෙ.ව.5.00', title: 'හිසවෙස් හා පාහිම්පත් පැළදවීම'},
   { time: 'පෙ.ව.6.45', title: 'රංග භූමියට ප්‍රවිශ්ට වීම හා මගුල් බෙර වාදනය'},
   { time: 'පෙ.ව.7.00', title: 'යාතිකාව'},
   { time: 'පෙ.ව.7.30', title: 'ඡායාරූප ගැනීම'},
@@ -30,25 +30,24 @@ const AGENDA = [
   { title: 'තේ පැන් සංග්‍රහය'}
 ];
 const PHOTOS = [
-  '/gallery1.jpg',
-  '/gallery2.jpg',
-  '/gallery3.jpg',
-  '/gallery4.jpg',
-  '/gallery5.jpg',
   '/gallery6.jpg',
-  '/gallery7.jpg',
+  '/gallery1.jpg',
   '/gallery8.jpg',
-  '/gallery9.jpg',
+  '/gallery3.jpg',
   '/gallery10.jpg',
+  '/gallery5.jpg',  
+  '/gallery7.jpg',  
+  '/gallery9.jpg',  
   '/gallery11.jpg',
   '/gallery12.jpg',
-  '/gallery13.jpg'
+  '/gallery13.jpg',
+  '/gallery2.jpg'
 ];
 const MAPS_QUERY = 'Sri Thilakarama Viharaya, Madapatha Rd, Piliyandala';
 const VENUE_NAME = MAPS_QUERY;
 const CONTACTS = [
-  { name: '[හරේන්ද්‍ර චාමර බටු ගුරුතුමා]', role: 'නර්තන ගුරුවරයා', phone: '070 406 0715'},
-  { name: '[රශ්මි තරූෂා ගුරුතුමිය]', role: 'නර්තන ගුරුවරයා', phone: '077 872 2044'},
+  { name: '[හරීන්ද්‍ර චාමර ගුරුතුමා]', role: 'නර්තන ගුරුවරයා', phone: '070 406 0715'},
+  { name: '[රශ්මි තරූෂා ගුරුතුමිය]', role: 'නර්තන ගුරුවරයා', phone: '071 872 0044'},
 ];
 
 function getTimeLeft() {
