@@ -43,7 +43,7 @@ export default function Home() {
         onClick={openInvitation}
         disabled={isOpening}
       >
-        විවෘ૔ කරනු
+        විවෘ૔ කරනුන
       </button>
 
       <style jsx>{`
@@ -206,6 +206,11 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+
+
 
 
 
