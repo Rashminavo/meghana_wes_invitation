@@ -4,14 +4,14 @@ import Divider from './Divider';
 
 const EVENT_DATE = '2026-12-30T07:00:00+05:00';
 const STUDENTS = [
-  { name: 'තෙනුර රිත්මල්',photo: '/student1.jpg' },
-  { name: '‍යුකිත පෙත්සුක',photo: '/student2.jpg' },
-  { name: 'පාරමී කාව්‍යා',photo: '/student3.jpg' },
-  { name: 'ජනුදි ජයමුතුලි',photo: '/student4.jpg' },
-  { name: 'හිරුෂි දිව්‍යාංජලී',photo: '/student5.jpg' },
-  { name: 'ආදිත්‍යා ආකර්ෂා',photo: '/student6.jpg' },
-  { name: 'ගෝවින්දි චාතුල්‍යා',photo: '/student7.jpg' },
-  { name: 'දුලීෂී නිම්තරා',photo: '/student8.jpg' }
+  { name: 'තෙනුර රිත්මල්',photo: '/student1.jpeg' },
+  { name: '‍යුකිත පෙත්සුක',photo: '/student2.jpeg' },
+  { name: 'පාරමී කාව්‍යා',photo: '/student3.jpeg' },
+  { name: 'ජනුදි ජයමුතුලි',photo: '/student4.jpeg' },
+  { name: 'හිරුෂි දිව්‍යාංජලී',photo: '/student5.jpeg' },
+  { name: 'ආදිත්‍යා ආකර්ෂා',photo: '/student6.jpeg' },
+  { name: 'ගෝවින්දි චාතුල්‍යා',photo: '/student7.jpeg' },
+  { name: 'දුලීෂී නිම්තරා',photo: '/student8.jpeg' }
 ];
 const AGENDA = [
   { time: 'පෙ.ව.5.00', title: 'හිස වෙස් හා පාහිම්පත් පැළදවීම'},
