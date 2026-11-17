@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -12,29 +12,14 @@ export default function Home() {
 
   return (
     <main className={`invitation-launcher${isOpening ? ' is-opening' : ''}`}>
-      <video
-        className="invitation-video"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-      >
-        <source
-          src="/Dancers_performing_at_traditiona…_202609080053.mp4"
-          type="video/mp4"
-        />
-      </video>
 
-      <div className="invitation-shade" aria-hidden="true" />
       <button
         className="open-invitation"
         type="button"
         onClick={openInvitation}
         disabled={isOpening}
       >
-        විවෘත කරන්න
+        Open Invitation
       </button>
 
       <style jsx>{`
@@ -52,24 +37,6 @@ export default function Home() {
 
         .invitation-launcher.is-opening {
           opacity: 0;
-        }
-
-        .invitation-video,
-        .invitation-shade {
-          inset: 0;
-          height: 100%;
-          position: absolute;
-          width: 100%;
-        }
-
-        .invitation-video {
-          object-fit: cover;
-          z-index: 0;
-        }
-
-        .invitation-shade {
-          background: rgba(0, 0, 0, 0.3);
-          z-index: 1;
         }
 
         .open-invitation {
