@@ -1,26 +1,6 @@
 ﻿import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-function FloralCorner({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 260 220" fill="none" aria-hidden="true">
-      <path d="M11 208C47 176 78 156 110 128C147 96 177 55 249 12" />
-      <path d="M66 169C38 161 23 140 27 111C58 116 74 136 66 169Z" />
-      <path d="M92 147C67 128 63 101 79 76C104 97 110 122 92 147Z" />
-      <path d="M125 115C111 88 118 61 143 42C162 70 157 96 125 115Z" />
-      <path d="M162 75C155 48 168 25 196 14C207 43 196 65 162 75Z" />
-      <path d="M65 166C89 159 106 144 117 124M93 143C119 132 138 111 146 88M126 112C151 101 171 81 181 57" />
-      <path d="M92 139C69 120 66 96 83 76C106 96 109 119 92 139Z" />
-      <path d="M127 108C106 88 107 63 126 44C148 64 149 87 127 108Z" />
-      <path d="M165 69C146 52 149 30 170 13C190 31 189 52 165 69Z" />
-      <path d="M203 45C210 30 224 24 240 29C235 45 222 51 203 45Z" />
-      <circle cx="111" cy="128" r="4" />
-      <circle cx="146" cy="88" r="3" />
-      <circle cx="181" cy="57" r="3" />
-    </svg>
-  );
-}
-
 export default function Home() {
   const router = useRouter();
   const [isOpening, setIsOpening] = useState(false);
@@ -32,9 +12,6 @@ export default function Home() {
 
   return (
     <main className={`invitation-launcher${isOpening ? ' is-opening' : ''}`}>
-      <FloralCorner className="floral floral-top-right" />
-      <FloralCorner className="floral floral-bottom-left" />
-
       <button
         className="open-invitation"
         type="button"
@@ -61,35 +38,12 @@ export default function Home() {
           width: 100vw;
           height: 100vh;
           height: 100dvh;
+          min-height: 100%;
         }
 
         .invitation-launcher.is-opening {
           opacity: 0;
           transform: scale(1.025);
-        }
-
-        .floral {
-          color: #bd8423;
-          height: clamp(155px, 30vw, 315px);
-          opacity: 0.88;
-          pointer-events: none;
-          position: absolute;
-          stroke: currentColor;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-          stroke-width: 1.35;
-          width: clamp(180px, 37vw, 390px);
-        }
-
-        .floral-top-right {
-          right: -24px;
-          top: -20px;
-        }
-
-        .floral-bottom-left {
-          bottom: -24px;
-          left: -24px;
-          transform: rotate(180deg);
         }
 
         .open-invitation {
@@ -137,11 +91,6 @@ export default function Home() {
         }
 
         @media (max-width: 480px) {
-          .floral {
-            height: 165px;
-            width: 205px;
-          }
-
           .open-invitation {
             justify-self: center;
             align-self: center;
