@@ -1,19 +1,22 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 function FloralCorner({ className }) {
   return (
-    <svg className={className} viewBox="0 0 180 180" fill="none" aria-hidden="true">
-      <path d="M12 168C56 153 69 119 87 91C104 64 128 43 168 15" />
-      <path d="M51 145C39 122 42 104 61 91C74 109 71 128 51 145Z" />
-      <path d="M78 105C69 82 75 64 97 54C107 75 100 93 78 105Z" />
-      <path d="M111 67C105 46 114 30 137 24C144 45 135 60 111 67Z" />
-      <path d="M54 143C74 137 88 122 97 105M81 101C103 96 119 80 127 62M113 66C132 62 147 47 153 32" />
-      <path d="M82 95C67 83 65 67 77 52C92 64 94 80 82 95Z" />
-      <path d="M111 62C96 49 96 33 110 19C124 32 124 48 111 62Z" />
-      <circle cx="91" cy="91" r="3" />
-      <circle cx="126" cy="56" r="3" />
-      <circle cx="65" cy="119" r="2" />
+    <svg className={className} viewBox="0 0 260 220" fill="none" aria-hidden="true">
+      <path d="M11 208C47 176 78 156 110 128C147 96 177 55 249 12" />
+      <path d="M66 169C38 161 23 140 27 111C58 116 74 136 66 169Z" />
+      <path d="M92 147C67 128 63 101 79 76C104 97 110 122 92 147Z" />
+      <path d="M125 115C111 88 118 61 143 42C162 70 157 96 125 115Z" />
+      <path d="M162 75C155 48 168 25 196 14C207 43 196 65 162 75Z" />
+      <path d="M65 166C89 159 106 144 117 124M93 143C119 132 138 111 146 88M126 112C151 101 171 81 181 57" />
+      <path d="M92 139C69 120 66 96 83 76C106 96 109 119 92 139Z" />
+      <path d="M127 108C106 88 107 63 126 44C148 64 149 87 127 108Z" />
+      <path d="M165 69C146 52 149 30 170 13C190 31 189 52 165 69Z" />
+      <path d="M203 45C210 30 224 24 240 29C235 45 222 51 203 45Z" />
+      <circle cx="111" cy="128" r="4" />
+      <circle cx="146" cy="88" r="3" />
+      <circle cx="181" cy="57" r="3" />
     </svg>
   );
 }
@@ -40,15 +43,17 @@ export default function Home() {
         onClick={openInvitation}
         disabled={isOpening}
       >
-        විවෘත කරන්න
+        විවෘ૔ කරනු
       </button>
 
       <style jsx>{`
         .invitation-launcher {
           align-items: center;
           background:
-            radial-gradient(ellipse at 50% 48%, rgba(255, 255, 251, 0.98), rgba(248, 241, 224, 0.92) 72%),
-            #f8f3e8;
+            radial-gradient(ellipse at 50% 48%, rgba(255, 251, 242, 0.82), rgba(250, 236, 215, 0.48) 100%),
+            repeating-linear-gradient(115deg, rgba(160, 112, 55, 0.025) 0, rgba(160, 112, 55, 0.025) 1px, transparent 1px, transparent 5px),
+            repeating-linear-gradient(25deg, rgba(135, 88, 42, 0.018) 0, rgba(135, 88, 42, 0.018) 1px, transparent 1px, transparent 7px),
+            #fbf0de;
           color: #651c2a;
           display: flex;
           height: 100vh;
@@ -66,16 +71,14 @@ export default function Home() {
         }
 
         .corner-ornament {
-          height: clamp(90px, 18vw, 190px);
+          height: clamp(110px, 24vw, 250px);
           pointer-events: none;
           position: absolute;
-          width: clamp(90px, 18vw, 190px);
+          width: clamp(110px, 24vw, 250px);
         }
 
         .corner-top-left {
-          background: linear-gradient(135deg, #651c2a, #7f2935);
-          border-bottom: 1px solid #b69354;
-          border-right: 1px solid #b69354;
+          background: linear-gradient(150deg, #a40812 0%, #87020b 78%, #64030a 100%);
           clip-path: polygon(0 0, 100% 0, 0 100%);
           left: 0;
           top: 0;
@@ -83,7 +86,7 @@ export default function Home() {
 
         .corner-top-left::after,
         .corner-bottom-right::after {
-          border: 1px solid rgba(218, 188, 123, 0.9);
+          border: 1px solid rgba(244, 190, 77, 0.95);
           content: '';
           height: 100%;
           position: absolute;
@@ -91,77 +94,77 @@ export default function Home() {
         }
 
         .corner-top-left::after {
-          clip-path: polygon(0 0, 83% 0, 0 83%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+          filter: drop-shadow(0 2px 1px #d8982d);
         }
 
         .corner-bottom-right {
-          background: linear-gradient(315deg, #651c2a, #7f2935);
-          border-left: 1px solid #b69354;
-          border-top: 1px solid #b69354;
+          background: linear-gradient(330deg, #a40812 0%, #87020b 78%, #64030a 100%);
           bottom: 0;
           clip-path: polygon(100% 0, 100% 100%, 0 100%);
           right: 0;
         }
 
         .corner-bottom-right::after {
-          clip-path: polygon(100% 17%, 100% 100%, 17% 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          filter: drop-shadow(0 -2px 1px #d8982d);
         }
 
         .floral {
-          color: #a47d42;
-          height: clamp(112px, 21vw, 220px);
-          opacity: 0.54;
+          color: #bd8423;
+          height: clamp(155px, 30vw, 315px);
+          opacity: 0.88;
           pointer-events: none;
           position: absolute;
           stroke: currentColor;
           stroke-linecap: round;
           stroke-linejoin: round;
-          stroke-width: 1.15;
-          width: clamp(112px, 21vw, 220px);
+          stroke-width: 1.35;
+          width: clamp(180px, 37vw, 390px);
         }
 
         .floral-top-right {
-          right: clamp(8px, 3vw, 38px);
-          top: clamp(8px, 3vw, 38px);
+          right: -24px;
+          top: -20px;
         }
 
         .floral-bottom-left {
-          bottom: clamp(8px, 3vw, 38px);
-          left: clamp(8px, 3vw, 38px);
+          bottom: -24px;
+          left: -24px;
           transform: rotate(180deg);
         }
 
         .open-invitation {
           appearance: none;
-          background: linear-gradient(180deg, #792b38 0%, #651c2a 55%, #531521 100%);
-          border: 1px solid #c6a45e;
+          background: linear-gradient(180deg, #9b0008 0%, #830008 48%, #690008 100%);
+          border: 2px solid #d39425;
           border-radius: 999px;
-          box-shadow: 0 10px 25px rgba(69, 25, 28, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+          box-shadow: 0 15px 26px rgba(95, 53, 25, 0.28), inset 0 1px 0 rgba(255, 238, 190, 0.28), inset 0 -2px 0 rgba(70, 0, 4, 0.4);
           color: #fffaf0;
           cursor: pointer;
           font-family: 'Noto Serif Sinhala', 'Georgia', serif;
           font-size: clamp(17px, 2.4vw, 23px);
           font-weight: 500;
           letter-spacing: 0.015em;
-          min-height: 62px;
-          min-width: min(270px, 76vw);
-          padding: 10px 38px;
+          min-height: clamp(76px, 9vw, 142px);
+          min-width: min(700px, 76vw);
+          padding: 14px 48px;
           position: relative;
           transition: box-shadow 240ms ease, filter 240ms ease, transform 240ms ease;
           z-index: 1;
         }
 
         .open-invitation::before {
-          border: 1px solid rgba(230, 205, 150, 0.85);
+          border: 1px solid rgba(255, 218, 126, 0.94);
           border-radius: inherit;
           content: '';
-          inset: 4px;
+          inset: 5px;
           pointer-events: none;
           position: absolute;
         }
 
         .open-invitation:hover {
-          box-shadow: 0 12px 30px rgba(69, 25, 28, 0.25), 0 0 18px rgba(194, 157, 82, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+          box-shadow: 0 16px 32px rgba(69, 25, 28, 0.29), 0 0 22px rgba(227, 177, 67, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
           filter: brightness(1.08);
           transform: translateY(-2px);
         }
@@ -177,18 +180,18 @@ export default function Home() {
 
         @media (max-width: 480px) {
           .corner-ornament {
-            height: 105px;
-            width: 105px;
+            height: 115px;
+            width: 115px;
           }
 
           .floral {
-            height: 128px;
-            width: 128px;
+            height: 165px;
+            width: 205px;
           }
 
           .open-invitation {
-            min-height: 58px;
-            min-width: min(250px, 78vw);
+            min-height: 68px;
+            min-width: min(350px, 78vw);
             padding-inline: 28px;
           }
         }
@@ -203,3 +206,6 @@ export default function Home() {
     </main>
   );
 }
+
+
+
