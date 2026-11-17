@@ -32,8 +32,6 @@ export default function Home() {
 
   return (
     <main className={`invitation-launcher${isOpening ? ' is-opening' : ''}`}>
-      <div className="corner-ornament corner-top-left" aria-hidden="true" />
-      <div className="corner-ornament corner-bottom-right" aria-hidden="true" />
       <FloralCorner className="floral floral-top-right" />
       <FloralCorner className="floral floral-bottom-left" />
 
@@ -48,92 +46,26 @@ export default function Home() {
 
       <style jsx>{`
         .invitation-launcher {
-          align-items: center;
-          box-sizing: border-box;
           background:
             radial-gradient(ellipse at 50% 48%, rgba(255, 251, 242, 0.82), rgba(250, 236, 215, 0.48) 100%),
             repeating-linear-gradient(115deg, rgba(160, 112, 55, 0.025) 0, rgba(160, 112, 55, 0.025) 1px, transparent 1px, transparent 5px),
             repeating-linear-gradient(25deg, rgba(135, 88, 42, 0.018) 0, rgba(135, 88, 42, 0.018) 1px, transparent 1px, transparent 7px),
             #fbf0de;
           color: #651c2a;
-          display: flex;
-          box-sizing: border-box;
+          display: grid;
+          inset: 0;
+          place-items: center;
+          overflow: hidden;
+          position: fixed;
+          transition: opacity 650ms ease, transform 650ms ease;
+          width: 100vw;
           height: 100vh;
           height: 100dvh;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          position: relative;
-          transition: opacity 650ms ease, transform 650ms ease;
-          width: 100%;
-        }
-
-        @media (max-width: 480px) {
-          .invitation-launcher {
-            inset: 0;
-            position: fixed;
-            height: 100%;
-            min-height: 100%;
-            width: 100vw;
-            display: grid;
-            place-items: center;
-          }
-
-          .open-invitation {
-            justify-self: center;
-            align-self: center;
-            margin: 0;
-            transform: none;
-          }
-
-          .open-invitation:hover {
-            transform: translateY(-2px);
-          }
         }
 
         .invitation-launcher.is-opening {
           opacity: 0;
           transform: scale(1.025);
-        }
-
-        .corner-ornament {
-          height: clamp(110px, 24vw, 250px);
-          pointer-events: none;
-          position: absolute;
-          width: clamp(110px, 24vw, 250px);
-        }
-
-        .corner-top-left {
-          background: linear-gradient(150deg, #a40812 0%, #87020b 78%, #64030a 100%);
-          clip-path: polygon(0 0, 100% 0, 0 100%);
-          left: 0;
-          top: 0;
-        }
-
-        .corner-top-left::after,
-        .corner-bottom-right::after {
-          border: 1px solid rgba(244, 190, 77, 0.95);
-          content: '';
-          height: 100%;
-          position: absolute;
-          width: 100%;
-        }
-
-        .corner-top-left::after {
-          clip-path: polygon(0 0, 100% 0, 0 100%);
-          filter: drop-shadow(0 2px 1px #d8982d);
-        }
-
-        .corner-bottom-right {
-          background: linear-gradient(330deg, #a40812 0%, #87020b 78%, #64030a 100%);
-          bottom: 0;
-          clip-path: polygon(100% 0, 100% 100%, 0 100%);
-          right: 0;
-        }
-
-        .corner-bottom-right::after {
-          clip-path: polygon(100% 0, 100% 100%, 0 100%);
-          filter: drop-shadow(0 -2px 1px #d8982d);
         }
 
         .floral {
@@ -205,17 +137,15 @@ export default function Home() {
         }
 
         @media (max-width: 480px) {
-          .corner-ornament {
-            height: 115px;
-            width: 115px;
-          }
-
           .floral {
             height: 165px;
             width: 205px;
           }
 
           .open-invitation {
+            justify-self: center;
+            align-self: center;
+            margin: 0;
             min-height: 68px;
             min-width: min(350px, 78vw);
             padding-inline: 28px;
