@@ -19,7 +19,7 @@ export default function Home() {
         onClick={openInvitation}
         disabled={isOpening}
       >
-        Open Invitation
+        විවෘත කරන්න 
       </button>
 
       <style jsx>{`
