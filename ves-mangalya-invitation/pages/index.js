@@ -14,7 +14,7 @@ export default function Home() {
     <main className={`invitation-launcher${isOpening ? ' is-opening' : ''}`}>
 
       <button
-        className="open-invitation"
+        className="විවෘත කරන්න"
         type="button"
         onClick={openInvitation}
         disabled={isOpening}
