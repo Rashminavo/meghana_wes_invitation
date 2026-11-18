@@ -32,16 +32,17 @@ const AGENDA = [
 const PHOTOS = [
   '/gallery6.jpg',
   '/gallery1.jpg',
-  '/gallery8.jpg',
-  '/gallery3.jpg',
+  '/gallery11.jpg',
+  '/gallery8.jpg',  
   '/gallery10.jpg',
+  '/gallery3.jpg',
+  '/gallery2.jpg',
   '/gallery5.jpg',  
   '/gallery7.jpg',  
   '/gallery9.jpg',  
-  '/gallery11.jpg',
   '/gallery12.jpg',
-  '/gallery13.jpg',
-  '/gallery2.jpg'
+  '/gallery13.jpg'
+  
 ];
 const MAPS_QUERY = 'Sri Thilakarama Viharaya, Madapatha Rd, Piliyandala';
 const VENUE_NAME = MAPS_QUERY;
